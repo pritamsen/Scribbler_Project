@@ -29,7 +29,7 @@
 /* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
 
 /* Edit save content button class propertry */
-.editSaveBtn{
+.editSaveButton{
     float: right;
     box-shadow: 0 5px 10px 0 rgb(248, 169, 187);
     padding: 10px 15px 10px 15px;
@@ -37,6 +37,10 @@
     color: white;
     border: none;
     outline: none;
+}
+
+.editSaveButton:hover{
+    box-shadow: 5px 5px 5px grey;
 }
 
 /* like and comments button class propertry  */
@@ -48,6 +52,10 @@
     color: white;
     border: none;
     outline: none;
+}
+
+.addLikecomments:hover{
+    box-shadow: 5px 5px 5px grey;
 }
 
 /* save content button */
@@ -70,7 +78,7 @@
 }
 
 /* All comments.. */
-#addEventNames{
+#listComments{
     background-color:rgb(226, 228, 230);
     padding: 10px;
     width: 59%;

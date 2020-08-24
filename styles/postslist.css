@@ -30,10 +30,6 @@ body{
     font-weight: bold;
 }
 
-.post:hover{
-    box-shadow: 10px 10px 5px grey;
-}
-
 .postContent {
     width: 85%;
     display: table-cell;
@@ -77,6 +73,11 @@ body{
     color: #808080;
 }
 
+.ellipsis-icon:hover{
+    color: orange;
+}
+
+
 .postHeader{
     display: flex;
     flex-direction: row;
@@ -85,11 +86,19 @@ body{
     font-size: 18px;
 }
 
+.post:hover{
+    box-shadow: 5px 5px 5px grey;
+}
+
 .trashIcon{
     margin: 2px;
     cursor: pointer;
     font-size: large;
     margin-top: 15px;
+}
+
+.trashIcon:hover{
+    color: red;
 }
 
 #lastPost{
