@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/common.css"/>
+     <link rel="stylesheet" type="text/css" href="../styles/post.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/postslist.css"/>
+     <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono|Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="titleContainer">
+            <p class="title">ScriBBler</p>
+            <p class="heading">Explore, Imagine, Create</p>
+        </div>
+        <div class="signInContainer">
+            <button class="buttonSignUp" onclick="showSignUp()">Sign Up</ibutton> 
+            <button class="buttonSignIn" onclick="showSignIn()">Sign In</button>
+        </div>
+    </div>
+
+    <div id="signUppopUp" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <div class="modalHead"> 
+                <h2 class="modalTitle">Get Started</h2>
+                <span class="modalClose" id="closeSignUp" onclick="hideSignUp()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <hr>
+            <div class="modalBody">
+                <form>
+                    <label for="name" class="labelText">Name</label>
+                    <input type="text" placeholder="Enter your name" id="name" required>
+                    <label for="username" class="labelText">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username" required>
+                    <label for="password" class="labelText">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" required>
+                    <label for="confirm-password" class="labelText">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirm-password" required>
+                    <button type="submit" class="modalSignInbutton" onclick="signup(name,username,password)">Sign Up</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--The Sign In Modal-->
+    <div id="signInpopUp" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+
+            <div class="modalHead">
+                <h2 class="modalTitle">Welcome Back!</h2>
+                <span onclick="hideSignIn()" id="closeSignIn" class="modalClose">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <hr>
+            <form>
+                <label for="username" class="labelText">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <label for="password" class="labelText">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit" onclick="signin(username, password)" class="modalSignInbutton">Sign In</button>
+            </form>
+            <p class=bottom-banner>Not a member?<span onclick="hideSignIn();showSignUp();" class=signup>Sign Up</span></p>
+        </div>
+    </div>
+
+        
+    </div>
+
+    <div class="blogContent">
+        <div id="blogTitle" class="blogTite">
+            <h id="blogTitleNew">Everything you shoud know about module and  require in Nodejs</h>
+        </div>
+
+        <div class="blogAuthor">
+
+            <!-- Insert code for Edit/Save button and  -->
+            <button id="editButton" class="editSaveBtn" onclick="editContent()">Edit&nbsp;<i
+                    class="fa fa-pencil-square-o"></i></button>
+            <button id="saveButton" class="editSaveBtn" onclick="saveContent()">Save&nbsp;<i
+                    class="fa fa-floppy-o"></i></button>
+            <p>Srishti Gupta</p>
+        </div>
+
+        <div class="blogText">
+            <p id="blogBody">
+                Built on top of Google Chrome's V8 Engine, Node.js (and its companion framework, Express.js) have come to dominate much of backend development, especially when JavaScript is your language of choice on the server-side. In this edition of "Best of DZone," we're going to take a look into the two frameworks to better understand key pieces of functionality and how they work in tandem to create applications.Before we begin, we'd like need to thank those who were a part of this article. DZone has and continues to be a community powered by contributors like you who are eager and passionate to share what they know with the rest of the world. A user can then update the post title as well as post text. Note that when the post title and post text are in the “editable” mode, there should be a cursor which would enable the user to edit/erase/add any text he/she wants in it. While the post title & text are in the editable mode, the "Edit" button should be replaced by the "Save" button, having the icon named "Save" displayed after the text in the button. Look at the screenshot given below:
+            </p>
+        </div>
+
+        <!-- Insert code for Like button, Comment button, Comment box here-->
+        <div class="Like">
+            <button id="addLikes" class="addLikecomments" onclick="postLiked()"><i class="fa fa-thumbs-up "></i>&nbsp;Like</button><br>
+            <label id="likeCount" class="Likes" value="" >Be the first one to like this!</label>
+        </div>
+
+        <div class="Comments">
+            <textarea id="userComments" type="text"  placeholder="Leave a comment..."></textarea><br>
+            <button id="addComments" class="addLikecomments" onclick="addComment(userComments)">Comment</button>
+        </div>
+        <h4>All Comments</h4>
+        <div id="addEventNames">
+        
+        </div>
+    </div>
+     
+    <!-- Insert code for Sign In modal here -->
+    <div class="modal" id="modelSignIn"  >
+        <div id="sign-in-modal" class="modalContainer">
+               
+    
+                    <h1 style="text-align:center;"><b>Welcome Back!</b><span class="close">&times;</span></h1><hr>
+                    
+                    <form id="signin-form" name="SigninForm">
+                        <label for="username" class="label-text">Username</label>
+                        <input type="text" id="username" placeholder="Enter Username" required>
+                        <label for="password" class="label-text">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required>
+                        <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+                    </form>
+                    
+                    <div class="signInFooter">
+                        <p style="text-align: center;"><b>Not a Member?<a id="SignUp" href="#" onclick=""> Sign Up</a></b></p>
+                    </div>
+                </div>
+        </div>
+
+         <!-- Insert code for Sign Up modal here -->
+        <div class="modal" id="modelSignUp"  >
+            <div id="sign-up-modal" class="modalContainer">
+               
+                    
+                    <h1 style="text-align:center;"><b>Get Started</b><span class="close">&times;</span></h1><hr>
+                    
+                    <form id="signup-form" name="SignupForm">
+                        <label for="fullname" class="label-text">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter Full Name" required>
+                        <label for="username" class="label-text">Username</label>
+                        <input type="text" id="username" placeholder="Enter Username" required>
+                        <label for="password" class="label-text">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required>
+                        <label for="confirmpassword" class="label-text">Confirm Password</label>
+                        <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
+                        <button type="submit" onclick="signup(fullname,username, password,confirmpassword)" class="signup-btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+
+       <script src="../scripts/postslist.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+        
+
+</body>
