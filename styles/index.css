@@ -26,6 +26,10 @@ body{
     font-size: 15px;
 }
 
+.buttonLoadAllPosts:hover{
+    box-shadow: 5px 5px 5px grey;
+}
+
 .buttonCreatePost{
     margin: 7px;
     padding: 10px 20px;
@@ -34,6 +38,10 @@ body{
     background-color:#e6b800;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-size: 15px;
+}
+
+.buttonCreatePost:hover{
+    box-shadow: 5px 5px 5px grey;
 }
 
 #contents{

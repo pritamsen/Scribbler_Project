@@ -30,6 +30,10 @@
     font-size: 15px;    
 }
 
+.buttonSignUp:hover{
+    box-shadow: 5px 5px 5px grey;
+}
+
 .buttonSignIn{
     background-color: blue;
     color: white;
@@ -40,6 +44,9 @@
     font-size: 15px;    
 }
 
+.buttonSignIn:hover{
+    box-shadow: 5px 5px 5px grey;
+}
 
 .modal {
     display: none;
@@ -88,6 +95,10 @@ form{
     font-weight: bold;
 }
 
+.modalClose:hover{
+    color: red;
+}
+
 .labelText{
     font-weight: bold;
     margin: 10px 0;
@@ -114,6 +125,10 @@ input {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   }
+
+  .modalSignInbutton:hover{
+    box-shadow: 5px 5px 5px grey;
+}
 
   .signup{
     color: blue;
