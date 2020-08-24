@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
-     <link href='css/font.css' rel='stylesheet' type='text/css'>
+    <!--Fonts-->
+     <!-- Common CSS -->
+    <link href='css/common.css' rel='stylesheet' type='text/css'>
 
-     <link href='css/index.css' rel='stylesheet' type='text/css'>
+    <!-- Index CSS -->
+    <link href='css/index.css' rel='stylesheet' type='text/css'>
+    
+	<!-- Place all CSS for fonts in this file -->
+    <link href='css/font.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -38,9 +47,63 @@
            
         </div>
     </div>
+    <div class="modal" id="modelSignIn"  >
+    <div id="sign-in-modal" class="modalContainer">
+           <!-- Insert code for Sign In modal here -->
+
+                <h1 style="text-align:center;"><b>Welcome Back!</b><span class="close">&times;</span></h1><hr>
+                
+                <form id="signin-form" name="SigninForm">
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+                </form>
+                
+                <div class="signInFooter">
+                    <p style="text-align: center;"><b>Not a Member?<a id="SignUp" href="#" onclick=""> Sign Up</a></b></p>
+                </div>
+            </div>
+    </div>
+    <div class="modal" id="modelSignUp"  >
+    <div id="sign-up-modal" class="modalContainer">
+        <!-- Insert code for Sign Up modal here -->
+            
+            <h1 style="text-align:center;"><b>Get Started</b><span class="close">&times;</span></h1><hr>
+            
+            <form id="signup-form" name="SignupForm">
+                <label for="fullname" class="label-text">Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter Full Name" required>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <label for="confirmpassword" class="label-text">Confirm Password</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
+                <button type="submit" onclick="signup(fullname,username, password,confirmpassword)" class="signup-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modelCreatePost"  >
+    <div id="create-post-modal" class="modalContainer">
+        <!-- Insert code for Create Post modal here -->
+
+            <h1 style="text-align:center;"><b>Pen your Post</b><span class="close">&times;</span></h1>
+            
+            <form id="create-post-form" name="CreatePostForm">
+                <label for="title" class="label-text">Title:</label>
+                <input type="text" id="title" >
+                <label for="content" class="label-text">Content:</label>
+                <textarea id="content" rows="23.5%" cols="100%"></textarea>
+                <button type="submit" onclick="createpost(title,content)" class="create-post-btn">Create</button>
+            </form>
+        </div>
+    </div>
 
 <!-- all Javascript elements in this file -->
-     <script src="js\index.js"></script>
+     <script src="./scripts/common.js"></script>
+     <script src="./scripts/index.js"></script>
 </body>
 
 </html>
