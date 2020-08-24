@@ -1,10 +1,9 @@
- /*main contant blog */
- .blogContent{
+ .postContent{
     margin: 15px 50px 15px 50px;
   }
 
 /*blog Title*/
-.blogTite {
+.postTite {
     font-size: 150%;
     font-family: 'Abel', sans-serif;
     font-weight: bold;
@@ -13,15 +12,15 @@
 }
 
 /* Author of the content*/
-.blogAuthor { 
+.postAuthor { 
    
-    font-family: 'Niconne', cursive;
-    font-size: 30px;  
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;  
    
 }
 
 /* Content blog */
-.blogText {
+.postText {
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      text-align: justify;
      font-size:medium;
