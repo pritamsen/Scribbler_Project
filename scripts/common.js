@@ -1,20 +1,20 @@
 var showSignUp = function() {
-    var signup_modal = document.getElementById('signUppopUp');
-    signup_modal.style.display = "flex";
+    var signUppopUp = document.getElementById('signUppopUp');
+    signUppopUp.style.display = "flex";
 }
 
 
 var hideSignUp = function(){
-    var signup_modal = document.getElementById('signUppopUp');
-    signup_modal.style.display = "none";
+    var signUppopUp = document.getElementById('signUppopUp');
+    signUppopUp.style.display = "none";
 }
 
 function showSignIn(){
-    var modal = document.getElementById("signInpopUp");
-    modal.style.display = "flex";
+    var popUp = document.getElementById("signInpopUp");
+    popUp.style.display = "flex";
 }
 
   function hideSignIn(){
-    var modal = document.getElementById("signInpopUp");
-    modal.style.display = "none";
+    var popUp = document.getElementById("signInpopUp");
+    popUp.style.display = "none";
 }
