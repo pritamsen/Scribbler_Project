@@ -1,4 +1,3 @@
-
 var showSignUp = function() {
     var signup_modal = document.getElementById('signUppopUp');
     signup_modal.style.display = "flex";

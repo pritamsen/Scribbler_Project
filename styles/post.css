@@ -7,18 +7,15 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-align: center;
-   
 }
 
-/* Author of the content*/
+
 .postAuthor { 
-   
     font-family: 'Ubuntu Mono', monospace;
     font-size: 18px;  
-   
 }
 
-/* Content blog */
+
 .postText {
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      text-align: justify;
@@ -26,9 +23,7 @@
      font-weight: 530;
 }
 
-/* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
 
-/* Edit save content button class propertry */
 .editSaveButton{
     float: right;
     box-shadow: 0 5px 10px 0 rgb(248, 169, 187);
@@ -43,7 +38,6 @@
     box-shadow: 5px 5px 5px grey;
 }
 
-/* like and comments button class propertry  */
 .addLikecomments{
     box-shadow: 0 5px 10px 0 rgb(248, 169, 187);
     margin: 5px 0px 10px 0px;
@@ -58,26 +52,22 @@
     box-shadow: 5px 5px 5px grey;
 }
 
-/* save content button */
 #saveButton{
     display: none;
    
 }
 
-/* Like Button */
 #addLikes{
     width: 100px;
     border-radius: 5px;
 }
 
-/* comments textarea */
 #userComments{
     width: 60%;
     height: 70px;
     margin-top: 15px;
 }
 
-/* All comments.. */
 #listComments{
     background-color:rgb(226, 228, 230);
     padding: 10px;
@@ -86,7 +76,6 @@
     flex-direction: column-reverse;
 }
 
-/* comments list */
 #comment{
     background-color: white;
     width: 95%;
@@ -97,9 +86,3 @@
 button:active {
     transform: translateY(2px);
   }
-
-
-
-
-
-/* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */

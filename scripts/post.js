@@ -1,17 +1,9 @@
-function addComment(id){
-   if (id.value.length>0){
-    var addEventName = id.value ;
-    document.getElementById('listComments').innerHTML += '<p id="comment">' + addEventName + '</p>' ; 
-    var a = document.getElementById('userComments');         
-    a.value=a.defaultValue;
-   }
-}
-
 var titleContent = document.getElementById('postTitleNew');
 var updatedtitleContent= 'UPDATED: ' + titleContent.innerHTML;
 var contentText = document.getElementById('postBody');
 var editButton = document.getElementById('editButton');
 var saveButton = document.getElementById('saveButton');
+var numberOfClicks=0;
 
 function editContent(){
     contentText.contentEditable="true";
@@ -20,6 +12,15 @@ function editContent(){
     titleContent.style.border="1px solid red";
     editButton.style.display="none";
     saveButton.style.display="block";
+}
+
+function addComment(id){
+   if (id.value.length>0){
+    var addEventName = id.value ;
+    document.getElementById('listComments').innerHTML += '<p id="comment">' + addEventName + '</p>' ; 
+    var a = document.getElementById('userComments');         
+    a.value=a.defaultValue;
+   }
 }
 
 function saveContent(){
@@ -31,7 +32,6 @@ function saveContent(){
     saveButton.style.display="none"; 
 }
 
-var numberOfClicks=0;
 function AddLikes(){
    var button = document.getElementById("addLikes")
    button.innerHTML = '<i class="fa fa-thumbs-up ">'+'</i>'+'&nbsp;'+"Liked!";
